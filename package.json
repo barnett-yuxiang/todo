@@ -9,5 +9,8 @@
   "author": "yuli.kamakura",
   "license": "ISC",
   "description": "this is todo app",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
 }
