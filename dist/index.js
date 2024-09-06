@@ -16,3 +16,5 @@ console.log(`${collection.userName}'s Todo List`);
 // todoItem.printDetails();
 // collection.addTodo(todoItem);
 collection.getTodoItems(true).forEach(item => item.printDetails());
+collection.removeComplete();
+collection.getTodoItems(true).forEach(item => item.printDetails());
