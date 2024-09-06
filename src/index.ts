@@ -1,5 +1,5 @@
-import { TodoItem } from "./todoItem";
-import { TodoCollection } from "./todoCollection";
+import { TodoItem } from "./todoItem.js";
+import { TodoCollection } from "./todoCollection.js";
 
 let todos: TodoItem[] = [
   new TodoItem(1, "Buy Flowers"),
