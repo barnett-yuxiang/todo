@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "yuli.kamakura",
   "license": "ISC",
-  "description": ""
+  "description": "this is todo app",
+  "type": "module"
 }
