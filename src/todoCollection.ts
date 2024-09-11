@@ -1,13 +1,16 @@
 import { TodoItem } from "./todoItem.js";
 
-type ItemCounts = { total: number; incomplete: number };
+type ItemCounts = {
+  total: number,
+  incomplete: number
+}
 
 export class TodoCollection {
   private nextId: number = 1;
-  private itemMap = new Map<number, TodoItem>();
+  protected itemMap = new Map<number, TodoItem>();
 
-  constructor(public userName: string, public todoItems: TodoItem[] = []) {
-    todoItems.forEach((item) => this.itemMap.set(item.id, item));
+  constructor(public userName: string, todoItems: TodoItem[] = []) {
+    todoItems.forEach(item => this.itemMap.set(item.id, item));
   }
 
   addTodo(task: string): number {
@@ -23,9 +26,8 @@ export class TodoCollection {
   }
 
   getTodoItems(includeComplete: boolean): TodoItem[] {
-    return [...this.itemMap.values()].filter(
-      (item) => includeComplete || !item.complete
-    );
+    return [...this.itemMap.values()]
+      .filter(item => includeComplete || !item.complete);
   }
 
   markComplete(id: number, complete: boolean) {
@@ -47,6 +49,6 @@ export class TodoCollection {
     return {
       total: this.itemMap.size,
       incomplete: this.getTodoItems(false).length
-    }
+    };
   }
 }
